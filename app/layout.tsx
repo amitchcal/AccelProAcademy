@@ -21,7 +21,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN">
-      <body>{children}</body>
+      <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({
+          "@context":"https://schema.org",
+          "@type":"EducationalOrganization",
+          name:"AccelPro Academy",
+          url:"https://accel-pro-academy.vercel.app",
+          logo:"https://accel-pro-academy.vercel.app/accelpro-logo.png",
+          parentOrganization:{"@type":"Organization",name:"Vividha Consultancy"},
+          address:{"@type":"PostalAddress",streetAddress:"390 S N Roy Road",addressLocality:"Kolkata",postalCode:"700038",addressCountry:"IN"},
+          email:"info@accelpro.academy",
+          telephone:"+91 97315 00452",
+          sameAs:["https://linkedin.com/amitchcal"]
+        })}} />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,6 +1,6 @@
 @import "tailwindcss/index.css";
 
-:root { --ink:#101313; --maroon:#101313; --maroon-deep:#080a0a; --gold:#d2a91f; --gold-dark:#b88f0d; --gold-pale:#f0e5cf; --paper:#f7f3ed; --white:#fff; --muted:#665f59; --line:#ddd5cb; --shadow:0 24px 70px rgba(17,21,22,.10); }
+:root { --ink:#101313; --maroon:#6f0a24; --maroon-deep:#480717; --gold:#d2a91f; --gold-dark:#b88f0d; --gold-pale:#f0e5cf; --paper:#f7f3ed; --white:#fff; --muted:#665f59; --line:#ddd5cb; --shadow:0 24px 70px rgba(17,21,22,.10); }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; font-size:16px; line-height:1.65; }
@@ -46,13 +46,14 @@ img { max-width:100%; display:block; }
 .section { padding:96px 0; }
 .section-sm { padding:64px 0; }
 .section-soft { background:#fff; }
-.section-dark,.section-maroon { background:var(--ink); color:#fff; }
+.section-dark { background:var(--ink); color:#fff; }
+.section-maroon { background:var(--maroon); color:#fff; }
 .section-head { display:grid; grid-template-columns:.8fr 1.2fr; gap:60px; align-items:end; margin-bottom:48px; }
 .section-head h2,.page-hero h1 { margin:0; font-size:clamp(2.35rem,5vw,4.9rem); }
 .section-head p { margin:0; max-width:660px; color:var(--muted); }
 .section-dark .section-head p,.section-maroon .section-head p { color:rgba(255,255,255,.72); }
 .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-.course-card { display:flex; min-height:390px; flex-direction:column; padding:30px; border:1px solid var(--line); border-radius:14px; background:#fff; transition:transform .2s,border-color .2s; }
+.course-card { display:flex; min-height:390px; flex-direction:column; padding:30px; scroll-margin-top:125px; border:1px solid var(--line); border-radius:14px; background:#fff; transition:transform .2s,border-color .2s; }
 .course-card:hover { transform:translateY(-5px); border-color:var(--gold); }
 .course-card .index { color:#8b6a06; font-size:.8rem; font-weight:850; letter-spacing:.1em; }
 .course-card h3 { margin:26px 0 10px; font-size:1.55rem; font-weight:850; line-height:1.15; }
