@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -23,7 +22,7 @@ export default function Privacy() {
       <h2>Retention and your choices</h2>
       <p>We retain submissions only while they are needed for the purposes described above or for legitimate operational and record-keeping requirements. You may ask us to correct or delete your information, or withdraw from marketing updates, by emailing <a href="mailto:info@accelpro.academy">info@accelpro.academy</a>.</p>
       <h2>Contact</h2>
-      <p>Questions about this notice can be sent to <a href="mailto:info@accelpro.academy">info@accelpro.academy</a>. You can also return to the <Link href="/contact">contact page</Link>.</p>
+      <p>Questions about this notice can be sent to <a href="mailto:info@accelpro.academy">info@accelpro.academy</a>. You can also return to the <a href="/contact">contact page</a>.</p>
       <p className="legal-updated">Last updated: 28 September 2026</p>
     </article></section>
   </main><SiteFooter/></>;
