@@ -9,7 +9,7 @@ for (const route of routes) {
 }
 const requiredCopy = [
   ["/", "Practical guidance from Amit Chakraborty."],
-  ["/programmes", "1.4.2 Data Science, ML and AI"],
+  ["/programmes", "Data Science, ML and AI"],
   ["/contact", "Send me updates from AccelPro Digital Marketing Academy on WhatsApp. I can stop them any time."],
 ];
 for (const [route, copy] of requiredCopy) {
