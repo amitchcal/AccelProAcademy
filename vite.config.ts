@@ -1,5 +1,6 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
+import { fileURLToPath } from "node:url";
 import hostingConfig from "./.openai/hosting.json";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
@@ -36,6 +37,23 @@ const localBindingConfig = {
 };
 
 export default defineConfig(async () => {
+  const isVercel = process.env.VERCEL === "1" || process.env.NITRO_PRESET === "vercel";
+
+  if (isVercel) {
+    const { nitro } = await import("nitro/vite");
+
+    return {
+      plugins: [vinext(), nitro()],
+      resolve: {
+        alias: {
+          "cloudflare:workers": fileURLToPath(
+            new URL("./lib/vercel-cloudflare-workers.ts", import.meta.url),
+          ),
+        },
+      },
+    };
+  }
+
   // Use Miniflare's local Request.cf placeholder unless fetching is requested.
   process.env.CLOUDFLARE_CF_FETCH_ENABLED ??= "false";
   process.env.WRANGLER_SEND_METRICS ??= "false";
