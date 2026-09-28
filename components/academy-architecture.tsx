@@ -13,7 +13,7 @@ export function AcademyArchitecture({ compact = false }: { compact?: boolean }) 
           <small>{course.format}</small>
         </div>
         <ul>{course.programmes.map((programme) => <li key={programme}>{programme}</li>)}</ul>
-        <a href={`/programmes#${course.id}-details`} aria-label={`Explore ${course.title}`}>Explore academy <span aria-hidden="true">→</span></a>
+        <a href={course.externalUrl ?? `/programmes#${course.id}-details`} target={course.externalUrl ? "_blank" : undefined} rel={course.externalUrl ? "noreferrer" : undefined} aria-label={`Explore ${course.title}${course.externalUrl ? " in a new tab" : ""}`}>Explore academy <span aria-hidden="true">→</span></a>
       </article>)}
     </div>
     <p className="architecture-foot">One parent brand, distinct learner promises, shared operating backbone</p>
