@@ -47,7 +47,8 @@ img { max-width:100%; display:block; }
 .section-sm { padding:64px 0; }
 .section-soft { background:#fff; }
 .section-dark { background:var(--ink); color:#fff; }
-.section-maroon { background:var(--maroon); color:#fff; }
+.section-maroon { background:linear-gradient(135deg,var(--ink) 0%,#171b1b 72%,#30290d 100%); color:#fff; border-block:1px solid rgba(210,169,31,.22); }
+.section-maroon .eyebrow { color:var(--gold); }
 .section-head { display:grid; grid-template-columns:.8fr 1.2fr; gap:60px; align-items:end; margin-bottom:48px; }
 .section-head h2,.page-hero h1 { margin:0; font-size:clamp(2.35rem,5vw,4.9rem); }
 .section-head p { margin:0; max-width:660px; color:var(--muted); }
