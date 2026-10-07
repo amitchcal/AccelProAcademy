@@ -25,11 +25,16 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
     /* Gold CTAs need dark text for reliable contrast, including inside nav links. */
     .gold,.links>a.gold{color:#050505!important}
-    /* Keep every part of the black-and-gold identity legible against the dark navigation. */
+    /* A full-width champagne menubar keeps the black-and-gold identity readable without boxing it in. */
+    .nav{border-bottom-color:rgba(8,10,10,.22);background:linear-gradient(105deg,rgba(236,227,208,.98),rgba(197,173,119,.97));box-shadow:0 12px 34px rgba(0,0,0,.26)}
     .navin{height:98px}
-    .logo{padding:6px 11px;border:1px solid rgba(240,204,88,.36);border-radius:14px;background:linear-gradient(145deg,rgba(250,247,239,.98),rgba(228,218,198,.92));box-shadow:0 8px 28px rgba(0,0,0,.34),0 0 26px rgba(212,170,34,.12)}
-    .logo img{width:110px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.18))}
-    @media(max-width:760px){.navin{height:84px}.logo{padding:4px 8px;border-radius:11px}.logo img{width:86px}}
+    .logo{padding:0;background:none;border:0;box-shadow:none}
+    .logo img{width:110px;filter:drop-shadow(0 2px 3px rgba(255,255,255,.28))}
+    .links>a{color:#121313}
+    .links>a:not(.btn):hover{color:#6e5200}
+    .nav .gold{background:#0b0d0d;color:var(--gold2)!important;box-shadow:0 10px 24px rgba(0,0,0,.22)}
+    .menu{border-color:rgba(0,0,0,.24);background:#0b0d0d;color:var(--gold2)}
+    @media(max-width:760px){.navin{height:84px}.logo img{width:86px}.links{background:rgba(236,227,208,.98)}.links>a{color:#121313}}
   </style>
 </head>
 <body>
