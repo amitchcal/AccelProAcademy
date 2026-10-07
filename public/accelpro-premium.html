@@ -25,6 +25,11 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
     /* Gold CTAs need dark text for reliable contrast, including inside nav links. */
     .gold,.links>a.gold{color:#050505!important}
+    /* Keep every part of the black-and-gold identity legible against the dark navigation. */
+    .navin{height:98px}
+    .logo{padding:6px 11px;border:1px solid rgba(240,204,88,.36);border-radius:14px;background:linear-gradient(145deg,rgba(250,247,239,.98),rgba(228,218,198,.92));box-shadow:0 8px 28px rgba(0,0,0,.34),0 0 26px rgba(212,170,34,.12)}
+    .logo img{width:110px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.18))}
+    @media(max-width:760px){.navin{height:84px}.logo{padding:4px 8px;border-radius:11px}.logo img{width:86px}}
   </style>
 </head>
 <body>
