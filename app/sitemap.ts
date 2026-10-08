@@ -1,1 +1,0 @@
-import type { MetadataRoute } from "next";const base="https://accel-pro-academy.vercel.app";export default function sitemap():MetadataRoute.Sitemap{return ["","/programmes","/about","/contact","/privacy"].map(path=>({url:`${base}${path}`,lastModified:new Date(),changeFrequency:path===""?"weekly":"monthly",priority:path===""?1:.7}))}
