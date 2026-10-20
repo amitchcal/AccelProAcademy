@@ -4,10 +4,11 @@ Lean production website for AccelPro Academy.
 
 ## Structure
 
-- `public/accelpro-premium.html` — self-contained responsive website
-- `public/accelpro-logo-deep-gold.png` — production logo
+- `public/index.html` — the website (single page)
+- `public/styles.css`, `public/script.js` — styling, starfield, menu and enquiry-form logic
+- `public/assets/` — logo mark (`logo-mark.svg`) and hero photo
 - `api/enquiries.js` — Vercel enquiry-form endpoint using private Blob storage
-- `vercel.json` — root-page routing and security headers
+- `vercel.json` — security headers
 
 ## Deploy to Vercel
 
@@ -15,4 +16,4 @@ Connect this GitHub repository to Vercel. No build command or output directory i
 
 ## Deploy to conventional hosting
 
-Upload `public/accelpro-premium.html` as `index.html` and place `public/accelpro-logo-deep-gold.png` beside it. The static site will load normally, but its enquiry form needs a compatible server endpoint at `/api/enquiries`.
+Upload the contents of `public/` as the site root. The static site will load normally, but its enquiry form needs a compatible server endpoint at `/api/enquiries`.
